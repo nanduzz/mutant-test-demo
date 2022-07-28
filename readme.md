@@ -1,6 +1,6 @@
 # Mutation Tests Demo
 
-### Introdução
+## Introdução
 
 Este projeto visa mostrar alguns problemas que podemos encontrar durante o desenvolvimento
 de testes de software ao focarmos apenas na cobertura de testes e não na qualidade deles.
@@ -18,7 +18,7 @@ alterações indesejadas no código podem passar despercebidas ao executarmos os
 Ainda no meu ponto de vista pessoal, se alterarmos em algum ponto a regra de negócio os testes
 devem começar a falhar, de modo que devam ser corrigidos para refletir a nova regra.
 
-### Compilação e geração dos relatórios
+## Compilação e geração dos relatórios
 
 Para a compilação e geração dos relatório acredito que seja necessário apenas possuir o 
 Java JDK em versão maior ou igual a 11, e o Maven.
