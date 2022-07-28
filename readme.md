@@ -45,7 +45,7 @@ Sempre que executado o comando gerará um novo relatório que pode ser visto em:
 
     ./target/pit-reports/[data-hora-invertida]/index.html
 
-## Análises sobre o projeto
+## Analises sobre o projeto
 
 O projeto desenvolvido, apesar de simples, visa apresentar a ferramenta PiTest para
 melhorar a <b>qualidade</b> dos testes e também concientizar que é possivel ter
