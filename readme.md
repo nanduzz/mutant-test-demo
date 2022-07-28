@@ -45,3 +45,18 @@ Sempre que executado o comando gerará um novo relatório que pode ser visto em:
 
     ./target/pit-reports/[data-hora-invertida]/index.html
 
+## Análises sobre o projeto
+
+O projeto desenvolvido, apesar de simples, visa apresentar a ferramenta PiTest para
+melhorar a <b>qualidade</b> dos testes e também concientizar que é possivel ter
+100% de cobertura de testes, porém, de forma ineficaz.
+
+No commit [b0ee4690](https://github.com/nanduzz/mutant-test-demo/commit/b0ee4690a78c64251e92f392fe1e88c71b1b3a44)
+o projeto já possuía 100% de cobertura informada pelo JaCoCo, porém, a qualidade dos
+testes não era das melhores.
+
+No commit a seguir ( [831267eb](https://github.com/nanduzz/mutant-test-demo/commit/831267ebeff5bb846e4eab5ab3fc8c4de19e8d90) )
+foram realizadas altetrações visando melhorar a qualidade dos testes existentes, qualidade o código
+e adição de novos testes buscando a melhora da qualidade apresentada pelo relatório do PiTest 
+
+
