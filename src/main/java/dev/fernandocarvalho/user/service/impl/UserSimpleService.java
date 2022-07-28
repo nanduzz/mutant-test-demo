@@ -1,10 +1,12 @@
 package dev.fernandocarvalho.user.service.impl;
 
+import dev.fernandocarvalho.user.exceptions.UserNotFoundException;
 import dev.fernandocarvalho.user.models.User;
 import dev.fernandocarvalho.infra.Repository;
 import dev.fernandocarvalho.user.service.SimpleService;
 import dev.fernandocarvalho.user.service.Validator;
 
+import java.util.Objects;
 import java.util.UUID;
 
 public class UserSimpleService implements SimpleService<User> {
@@ -24,8 +26,13 @@ public class UserSimpleService implements SimpleService<User> {
 
     @Override
     public User find(UUID id) {
+        if (Objects.isNull(id)){
+            throw new IllegalArgumentException("Id não pode ser nulo");
+        }
         return userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(UserNotFoundException::new);
     }
+
+
 
 }

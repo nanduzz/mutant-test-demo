@@ -1,6 +1,7 @@
 package dev.fernandocarvalho.user.service.impl;
 
 import dev.fernandocarvalho.user.models.User;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,19 +10,28 @@ class UserValidatorTest {
     UserValidator validator = new UserValidator();
 
     @Test
-    void deveLancarRuntimeExceptionQuandoIdadeInvalida(){
+    void deveLancarIdadeInvalidaException(){
         assertThrows(
-                RuntimeException.class,
-                () -> validator.validate(new User("Teste", 15, true))
+                UserValidator.IdadeInvalidaException.class,
+                () -> validator.validate(new User("Teste", 17, true))
         );
     }
 
     @Test
-    void deveLancarRuntimeExceptionQuandoNomeEmBranco(){
+    void deveLancarNomeInvalidoException(){
         assertThrows(
-                RuntimeException.class,
-                () -> validator.validate(new User("", 33, true))
+                UserValidator.NomeInvalidoException.class,
+                () -> validator.validate(new User("", 18, true))
         );
+    }
+
+    @Test
+    void naoDeveLancarExceptionQuandoValidacoesEstiveremCorretas(){
+        try{
+            validator.validate(new User("teste", 18, true));
+        }catch (RuntimeException e ){
+            Assertions.fail();
+        }
     }
 
 }

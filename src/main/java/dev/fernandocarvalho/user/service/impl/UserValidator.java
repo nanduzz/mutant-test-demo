@@ -13,14 +13,26 @@ public class UserValidator implements Validator<User> {
 
     private void validateName(User user) {
         if (user.getName().isBlank()) {
-            throw new RuntimeException("None do usuário não pode ficar em branco!");
+            throw new NomeInvalidoException();
         }
     }
 
     private void validateAge(User user) {
         final int MIN_AGE = 18;
         if (user.getAge() < MIN_AGE) {
-            throw new RuntimeException("Idade do usuário abaixo da minima permitida");
+            throw new IdadeInvalidaException();
+        }
+    }
+
+    static class IdadeInvalidaException extends RuntimeException {
+        public IdadeInvalidaException() {
+            super("Idade do usuário abaixo da minima permitida");
+        }
+    }
+
+    static class NomeInvalidoException extends RuntimeException {
+        public NomeInvalidoException() {
+            super("None do usuário não pode ficar em branco!");
         }
     }
 }

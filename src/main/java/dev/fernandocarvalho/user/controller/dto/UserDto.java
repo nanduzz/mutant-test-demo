@@ -16,10 +16,8 @@ public class UserDto {
     }
 
     public UserDto(UUID id, String name, int age, boolean active) {
+        this(name, age, active);
         this.id = id;
-        this.name = name;
-        this.age = age;
-        this.active = active;
     }
 
     public UUID getId() {

@@ -14,10 +14,10 @@ public class User {
     }
 
     public User(UUID id, String name, int age, boolean active) {
-        this.id = id;
         this.name = name;
         this.age = age;
         this.active = active;
+        this.id = id;
     }
 
     public UUID getId() {
