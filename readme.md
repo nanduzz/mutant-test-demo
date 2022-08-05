@@ -5,7 +5,7 @@
 Este projeto visa mostrar alguns problemas que podemos encontrar durante o desenvolvimento
 de testes de software ao focarmos apenas na cobertura de testes e não na qualidade deles.
 
-A cobertura e testes apesar de ser um bom indicador da qualidade do software ainda 
+A cobertura de testes apesar de ser um bom indicador da qualidade do software ainda 
 pode ser enganosa. Geralmente plugins como o JaCoCo detectam se o teste passa por certo
 ponto do código, porém, isso não é suficiente para garantir um teste de qualidade. Um teste
 pode passar por certo ponto sem realmente testar os processos realziados.
@@ -20,7 +20,7 @@ devem começar a falhar, de modo que devam ser corrigidos para refletir a nova r
 
 ## Compilação e geração dos relatórios
 
-Para a compilação e geração dos relatório acredito que seja necessário apenas possuir o 
+Para a compilação e geração dos relatórios acredito que seja necessário apenas possuir o 
 Java JDK em versão maior ou igual a 11, e o Maven.
 A compilaũão do projeto gerando os relatórios pode ser feita usando o seguinte comando na 
 pasta raiz do projeto:
